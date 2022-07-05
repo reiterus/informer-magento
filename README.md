@@ -35,7 +35,7 @@ The list of detailed information is formed at your discretion, it may look like 
 
 ### Set detail info
 To generate a set of extended data for detailed information, 
-you can use the plugin from the "[example](src/example/Plugin/InformerBefore.php)" directory. 
+you can use the plugin from the "[example](example/Plugin/InformerBefore.php)" directory. 
 Don't forget to include the following information in your `di.xml` file.
 
 ```xml
@@ -52,6 +52,8 @@ To check the functionality of endpoints via PhpStorm, you can use files from the
 - base.http: get minimal base information
 - detail.http: get detailed information you need
 - token.http: get admin token
+
+See more in the "[request](request)" folder.
 
 # Installation
 You can install the bundle in two ways
