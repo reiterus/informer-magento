@@ -58,10 +58,7 @@ class BaseInfo implements BaseInfoInterface
      */
     public function getLocale(): string
     {
-        return $this->scopeConfig->getValue(
-            'general/locale/code',
-            ScopeInterface::SCOPE_STORE
-        );
+        return $this->getConfigValue('general/locale/code');
     }
 
     /**
@@ -71,10 +68,7 @@ class BaseInfo implements BaseInfoInterface
      */
     public function getTimezone(): string
     {
-        return $this->scopeConfig->getValue(
-            'general/locale/timezone',
-            ScopeInterface::SCOPE_STORE
-        );
+        return $this->getConfigValue('general/locale/timezone');
     }
 
     /**
@@ -84,8 +78,20 @@ class BaseInfo implements BaseInfoInterface
      */
     public function getCurrency(): string
     {
+        return $this->getConfigValue('currency/options/base');
+    }
+
+    /**
+     * Get "core_config_data" value
+     *
+     * @param string $path
+     *
+     * @return mixed
+     */
+    protected function getConfigValue(string $path)
+    {
         return $this->scopeConfig->getValue(
-            'currency/options/base',
+            $path,
             ScopeInterface::SCOPE_STORE
         );
     }

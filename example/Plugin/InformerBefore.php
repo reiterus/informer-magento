@@ -11,7 +11,7 @@ use Reiterus\Informer\Model\Informer;
 
 /**
  * Class Informer
- * @package Reiterus\Plugin
+ * @package Vendor\Module\Plugin
  */
 class InformerBefore
 {
