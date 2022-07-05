@@ -8,6 +8,7 @@
 namespace Reiterus\Informer\Model;
 
 use Magento\Framework\DataObject;
+use Reiterus\Informer\Helper\Query;
 use Reiterus\Informer\Api\Data\BaseInfoInterface;
 use Reiterus\Informer\Api\InformerInterface;
 
@@ -17,17 +18,21 @@ use Reiterus\Informer\Api\InformerInterface;
  */
 class Informer extends DataObject implements InformerInterface
 {
+    protected Query $query;
     protected BaseInfoFactory $baseInfoFactory;
 
     /**
+     * @param Query $query
      * @param BaseInfoFactory $baseInfoFactory
      * @param array $data
      */
     public function __construct(
+        Query $query,
         BaseInfoFactory $baseInfoFactory,
         array           $data = []
     )
     {
+        $this->query = $query;
         $this->baseInfoFactory = $baseInfoFactory;
         parent::__construct($data);
     }
@@ -49,9 +54,19 @@ class Informer extends DataObject implements InformerInterface
      */
     public function getDetailInfo(): array
     {
-        return [
-            $this->getData(self::DETAIL_INFO)
+        $data = $this->getData(self::DETAIL_INFO);
+
+        $mustHave = [
+            'lifetime_sales' => $this->query->getLifetimeSales(),
+            'average_order' => $this->query->getAverageOrder(),
+            'orders_number' => $this->query->getCountOrders(),
+            'customers_number' => $this->query->getCountCustomers(),
+            'admins_number' => $this->query->getCountAdmins(),
         ];
+
+        $data = array_merge($mustHave, $data);
+
+        return [$data];
     }
 
     /**

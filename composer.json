@@ -3,7 +3,7 @@
     "description": "Get Magento 2 store information from REST API endpoints",
     "keywords": ["reiterus", "informer", "magento2", "magento2-module", "magento2-module-free"],
     "type": "magento2-module",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "minimum-stability": "dev",
     "license": "MIT",
     "authors": [

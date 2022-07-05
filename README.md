@@ -26,9 +26,12 @@ The list of detailed information is formed at your discretion, it may look like 
 ```json
 [
     {
-        "key_1": "value_1",
-        "key_2": "value_2",
-        "key_3": "value_3"
+        "lifetime_sales": "29.00",
+        "average_order": "14.50",
+        "orders_number": "2",
+        "customers_number": "1",
+        "admins_number": "3",
+        "extended_data": "from main application"
     }
 ]
 ```
