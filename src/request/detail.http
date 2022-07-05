@@ -1,0 +1,3 @@
+GET http://magento.localhost/rest/default/V1/reiterus/informer/detail
+Accept: application/json
+Authorization: Bearer 756sl7m1b75oiio18t6oobmh4sez015l

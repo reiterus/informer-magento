@@ -1,0 +1,2 @@
+GET http://magento.localhost/rest/default/V1/reiterus/informer
+Accept: application/json

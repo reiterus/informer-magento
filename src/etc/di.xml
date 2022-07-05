@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright   Copyright (c) 2022 Reiterus
+ * @author      Pavel Vasin <reiterus@yandex.ru>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Reiterus\Informer\Api\InformerInterface"
+                type="Reiterus\Informer\Model\Informer"/>
+    <preference for="Reiterus\Informer\Api\Data\BaseInfoInterface"
+                type="Reiterus\Informer\Model\BaseInfo"/>
+</config>

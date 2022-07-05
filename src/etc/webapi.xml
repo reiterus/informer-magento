@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright   Copyright (c) 2022 Reiterus
+ * @author      Pavel Vasin <reiterus@yandex.ru>
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route method="GET" url="/V1/reiterus/informer">
+        <service class="Reiterus\Informer\Api\InformerInterface" method="getBaseInfo"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="GET" url="/V1/reiterus/informer/detail">
+        <service class="Reiterus\Informer\Api\InformerInterface" method="getDetailInfo"/>
+        <resources>
+            <resource ref="Magento_Backend::admin"/>
+        </resources>
+    </route>
+</routes>
