@@ -59,7 +59,7 @@ To check the functionality of endpoints via PhpStorm, you can use files from the
 See more in the "[request](request)" folder.
 
 # Installation
-You can install the bundle in two ways
+You can install the package in two ways
 
 From packagist.org
 ```shell
